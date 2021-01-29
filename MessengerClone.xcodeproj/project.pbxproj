@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC8128070B5137C5B4B82AD3 /* Pods_MessengerClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE423E874A04D5FFB74E702C /* Pods_MessengerClone.framework */; };
+		C25FA6AA25C3A4300008383F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C25FA6A925C3A4300008383F /* GoogleService-Info.plist */; };
 		C2AC919225B37FEB00EE727E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AC919125B37FEB00EE727E /* AppDelegate.swift */; };
 		C2AC919425B37FEB00EE727E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AC919325B37FEB00EE727E /* SceneDelegate.swift */; };
 		C2AC919625B37FEB00EE727E /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AC919525B37FEB00EE727E /* ConversationsViewController.swift */; };
@@ -23,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4456C069EDD6B3508E2ADE83 /* Pods-MessengerClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessengerClone.debug.xcconfig"; path = "Target Support Files/Pods-MessengerClone/Pods-MessengerClone.debug.xcconfig"; sourceTree = "<group>"; };
+		7C12554603F6B2950F1B8DF1 /* Pods-MessengerClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessengerClone.release.xcconfig"; path = "Target Support Files/Pods-MessengerClone/Pods-MessengerClone.release.xcconfig"; sourceTree = "<group>"; };
+		C25FA6A925C3A4300008383F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C2AC918E25B37FEB00EE727E /* MessengerClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessengerClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2AC919125B37FEB00EE727E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2AC919325B37FEB00EE727E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +43,7 @@
 		C2AC91BB25B3825500EE727E /* NewConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationViewController.swift; sourceTree = "<group>"; };
 		C2AC91BE25B3827000EE727E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C2AC91C425B38A6800EE727E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		EE423E874A04D5FFB74E702C /* Pods_MessengerClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MessengerClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,17 +51,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC8128070B5137C5B4B82AD3 /* Pods_MessengerClone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C5D502B5CF724B3D1099E3D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4456C069EDD6B3508E2ADE83 /* Pods-MessengerClone.debug.xcconfig */,
+				7C12554603F6B2950F1B8DF1 /* Pods-MessengerClone.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		609B17ACE984BF2B1E39EFBE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE423E874A04D5FFB74E702C /* Pods_MessengerClone.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C2AC918525B37FEB00EE727E = {
 			isa = PBXGroup;
 			children = (
 				C2AC919025B37FEB00EE727E /* MessengerClone */,
 				C2AC918F25B37FEB00EE727E /* Products */,
+				5C5D502B5CF724B3D1099E3D /* Pods */,
+				609B17ACE984BF2B1E39EFBE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +102,7 @@
 				C2AC91A825B380C200EE727E /* Views */,
 				C2AC91A725B380BB00EE727E /* Controllers */,
 				C2AC919F25B37FEE00EE727E /* Info.plist */,
+				C25FA6A925C3A4300008383F /* GoogleService-Info.plist */,
 			);
 			path = MessengerClone;
 			sourceTree = "<group>";
@@ -151,9 +178,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C2AC91A225B37FEE00EE727E /* Build configuration list for PBXNativeTarget "MessengerClone" */;
 			buildPhases = (
+				886B2CFDFAD654B12D2E9117 /* [CP] Check Pods Manifest.lock */,
 				C2AC918A25B37FEB00EE727E /* Sources */,
 				C2AC918B25B37FEB00EE727E /* Frameworks */,
 				C2AC918C25B37FEB00EE727E /* Resources */,
+				3AE8EC05249C3ECA1E8196AA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -201,6 +230,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C25FA6AA25C3A4300008383F /* GoogleService-Info.plist in Resources */,
 				C2AC919E25B37FEE00EE727E /* LaunchScreen.storyboard in Resources */,
 				C2AC919B25B37FEE00EE727E /* Assets.xcassets in Resources */,
 				C2AC919925B37FEB00EE727E /* Main.storyboard in Resources */,
@@ -208,6 +238,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3AE8EC05249C3ECA1E8196AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MessengerClone/Pods-MessengerClone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MessengerClone/Pods-MessengerClone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MessengerClone/Pods-MessengerClone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		886B2CFDFAD654B12D2E9117 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MessengerClone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C2AC918A25B37FEB00EE727E /* Sources */ = {
@@ -367,6 +439,7 @@
 		};
 		C2AC91A325B37FEE00EE727E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4456C069EDD6B3508E2ADE83 /* Pods-MessengerClone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -387,6 +460,7 @@
 		};
 		C2AC91A425B37FEE00EE727E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C12554603F6B2950F1B8DF1 /* Pods-MessengerClone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
