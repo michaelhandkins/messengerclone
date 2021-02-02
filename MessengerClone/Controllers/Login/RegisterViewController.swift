@@ -169,7 +169,7 @@ class RegisterViewController: UIViewController {
                 return
             }
             
-            guard !exists else {
+            guard exists == false else {
                 strongSelf.alertUserLoginError(message: "A user is already registered with the email address")
                 return
             }
@@ -191,7 +191,7 @@ class RegisterViewController: UIViewController {
         }
     }
     
-    func alertUserLoginError(message: String = "Please enter all information  to create a new account") {
+    func alertUserLoginError(message: String = "Please enter all information to create a new account") {
         let alert = UIAlertController(title: "Whoops", message: message, preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
