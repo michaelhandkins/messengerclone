@@ -13,6 +13,8 @@ pod 'Firebase/Database'
 #Facebook
 pod 'FBSDKLoginKit'
 
+#Google
+pod 'GoogleSignIn'
 
   # Pods for MessengerClone
 
