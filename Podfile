@@ -20,6 +20,7 @@ pod 'MessageKit'
 pod 'JGProgressHUD'
 pod 'RealmSwift'
 pod 'SDWebImage'
+pod 'Firebase/Storage'
 
   # Pods for MessengerClone
 
