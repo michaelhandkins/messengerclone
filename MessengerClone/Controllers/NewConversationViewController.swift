@@ -10,7 +10,11 @@ import JGProgressHUD
 
 class NewConversationViewController: UIViewController {
     
-    private let spinner = JGProgressHUD()
+    private let spinner = JGProgressHUD(style: .dark)
+    
+    private var users = [[String: String]]()
+    private var results = [[String: String]]()
+    private var hasFetched = false
     
     private let searchBar: UISearchBar = {
         let searchBar = UISearchBar()
@@ -55,7 +59,52 @@ class NewConversationViewController: UIViewController {
 extension NewConversationViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        //
+        guard let text = searchBar.text, !text.isEmpty, !text.replacingOccurrences(of: " ", with: "").isEmpty else {
+            return
+        }
+        
+        results.removeAll()
+        
+        spinner.show(in: view)
+        
+        self.searchUsers(query: text)
+    }
+    
+    func searchUsers(query: String) {
+        //check if array has Firebase result
+        //if it does, filter
+        //if not, fetch then filter
+        
+        if hasFetched {
+            filterUsers(with: query)
+        } else {
+            DatabaseManager.shared.getAllUsers(completion: { [weak self] result in
+                switch result {
+                case .success(let usersCollection):
+                    self?.users = usersCollection
+                    self?.filterUsers(with: query)
+                case .failure(let error):
+                    print("Failed to get users: \(error)")
+                }
+            })
+        }
+    }
+    
+    func filterUsers(with term: String) {
+        guard hasFetched else {
+            return
+        }
+        var results: [[String: String]] = self.users.filter({
+            guard let name = $0["name"]?.lowercased() else {
+                return false
+            }
+            
+            return name.hasPrefix(term.lowercased())
+        })
+        
+        self.results = results
+        
+        
     }
     
 }
