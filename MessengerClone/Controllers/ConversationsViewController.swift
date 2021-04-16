@@ -54,6 +54,7 @@ class ConversationsViewController: UIViewController {
             return
         }
         let vc = ChatViewController(with: email)
+        vc.isNewConversation = true
         vc.title = name
         vc.navigationItem.largeTitleDisplayMode = .never
         navigationController?.pushViewController(vc, animated: true)
